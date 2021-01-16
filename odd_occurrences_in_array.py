@@ -8,5 +8,5 @@ def solution(A: list) -> int:
         items_count = dict(Counter(A))
         for k, v in items_count.items():
             if v % 2 != 0:
-                return int(k)
+                return k
     return None
