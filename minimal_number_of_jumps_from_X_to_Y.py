@@ -1,8 +1,12 @@
+import math
+
 
 def solution(X: int, Y: int, D: int) -> int:
-    jumps = 0
     distance = Y-X
     while distance > 0:
-        jumps += 1
-        distance -= D
-    return jumps
+        multiples = (distance / D)
+        if multiples > math.floor(multiples):
+            return math.floor(multiples) + 1
+        else:
+            return math.floor(multiples)
+    return 0
