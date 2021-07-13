@@ -2,6 +2,11 @@
 # For example, given [1, 3, 7] = 36
 
 def solution(a: list) -> int:
+    """
+        from itertools import combinations
+        y = [a[s:e] for s, e in combinations(range(len(a) + 1), 2)]
+        another generator solution
+    """
     n = len(a)
     temp, result = 0, 0
 
